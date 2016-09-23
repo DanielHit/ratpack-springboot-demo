@@ -20,11 +20,11 @@ public class RouterChain implements ratpack.func.Action<Chain> {
     @Override
     public void execute(Chain chain) throws Exception {
         LOGGER.info("enter 1");
-        chain.path("foo", fooHandler);
         LOGGER.info("enter 2");
         chain.path("bar", barHandler);
         LOGGER.info("enter 3");
         chain.path(barHandler).get(ctx -> ctx.render(barHandler));
+        chain.post("foo",fooHandler);
     }
 
 }
