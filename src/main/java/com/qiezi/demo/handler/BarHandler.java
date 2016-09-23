@@ -15,4 +15,5 @@ public class BarHandler implements Handler {
         ctx.render(json(new People("daniel", 23)));
     }
 
+
 }
