@@ -1,13 +1,9 @@
 package com.qiezi.demo.model;
 
-import java.io.Serializable;
-
 /**
  * Created by Daniel on 9/23/16.
  */
-public class People implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class People  {
 
     private String name;
     private int age;
