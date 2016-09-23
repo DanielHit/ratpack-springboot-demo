@@ -15,5 +15,6 @@ public class FooHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
         ctx.render(ctx.parse(fromJson(RequestVo.class)).map(p -> json(new People(p.getName(), 23))));
+        ctx.next();
     }
 }
