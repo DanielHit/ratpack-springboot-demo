@@ -9,6 +9,7 @@ import ratpack.server.ServerConfig;
  * Created by Daniel on 9/22/16.
  */
 @SpringBootApplication
+//@EnableRatpack
 public class Application {
 
     public static void main(String... args) throws Exception {
