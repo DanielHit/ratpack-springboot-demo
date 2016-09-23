@@ -17,7 +17,6 @@ public class RouterChain implements ratpack.func.Action<Chain> {
     Handler fooHandler = new FooHandler();
     Handler barHandler = new BarHandler();
 
-
     @Override
     public void execute(Chain chain) throws Exception {
         LOGGER.info("enter 1");
@@ -25,6 +24,7 @@ public class RouterChain implements ratpack.func.Action<Chain> {
         LOGGER.info("enter 2");
         chain.path("bar", barHandler);
         LOGGER.info("enter 3");
+        chain.path(barHandler).get(ctx -> ctx.render(barHandler));
     }
 
 }
